@@ -43,6 +43,4 @@ The project is ment to showcase basic understanding of web api and coding skills
 2. Error and information Logging.
 3. Input validation.
 4. Authentication or authorization
-5. An API gateway for caching and rate limiting policies.
-
-7. 
+5. An API gateway for caching and rate limiting policies. 
