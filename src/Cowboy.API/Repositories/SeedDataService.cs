@@ -2,7 +2,7 @@
 
 namespace Cowboy.API.Repositories
 {
-    public class SeedDataService
+    public class SeedDataService : ISeedDataService
     {
         public void Initialize(CowboyDBContext context)
         {
