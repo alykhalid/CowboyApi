@@ -1,4 +1,5 @@
 
+using Cowboy.API.Helper;
 using Cowboy.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +28,7 @@ namespace Cowboy.API
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.SeedData();
             }
 
             app.UseHttpsRedirection();
