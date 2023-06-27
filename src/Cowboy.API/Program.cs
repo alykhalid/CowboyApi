@@ -1,4 +1,7 @@
 
+using Cowboy.API.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 namespace Cowboy.API
 {
     public class Program
@@ -13,6 +16,9 @@ namespace Cowboy.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<CowboyDBContext>(opt =>
+                opt.UseInMemoryDatabase("CowboyDatabase"));
 
             var app = builder.Build();
 
