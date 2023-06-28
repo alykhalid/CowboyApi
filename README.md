@@ -58,4 +58,22 @@ The project is ment to showcase basic understanding of web api and coding skills
 2. Error and information Logging.
 3. Input validation.
 4. Authentication or authorization
-5. An API gateway for caching and rate limiting policies. 
+5. An API gateway for caching and rate limiting policies.
+6. No code comments
+
+## API security
+
+In order to secure the cowboy API, we can implement client credentails flow from OAUTH 2.0. This involves an application exchanging its credentials, such as client ID and client secret, for an access token.
+
+This flow is best suited for Machine-to-Machine (M2M) applications, such as CLIs, daemons, or backend services.
+
+![client credentails flow](/client-credentails-flow.png)
+
+* Client sends client id and secret with scope to identity provider (idp)
+* idp provides a token to the client
+* Client will add the token to the HTTP header, when calling the API
+* the API will validate the token using the idp.
+
+Token format is JWT (JSON web token)
+
+HTTPS is a must when using jwt tokens
