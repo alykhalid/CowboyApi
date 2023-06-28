@@ -17,6 +17,21 @@ This is a simple web api  project written in C#.
 
    This folder contains classes and methods for the REST api  which can be used by the user to call this service.
 
+## List of REST api's
+
+| Method | URI | Description |
+|---|---|---|
+| GET | /api/v1/cowboy/list | Gets a list of all cowboys |
+| GET | /api/v1/cowboy/{id} | Get a single cowboy by Id |
+| POST | /api/v1/cowboy/ | Create a new cowboy |
+| DELETE | /api/v1/cowboy/{id} | Delete a cowboy by Id |
+| PATCH  |  /api/v1/cowboy?id={id} | Update a existing cowboy  |
+| POST | /api/v1/cowboy/shoot/{id} | Ask a cowboy to shoot his gun |
+| POST | /api/v1/cowboy/reload/{id} | Ask a cowboy to reload his gun |
+| POST | /api/v1/cowboy/shootout?FirstCowboyId={id}&SecondCowboyId={id} | Simulate a shootout between two cowboys |
+
+## [Postman document](/Cowboy%20API.postman_collection.json)
+
 ## Game Algorithm
 
 The code simulates a shootout between two cowboys, with each round randomly determining whether the shooter hits the opponent based on their accuracy. The shootout continues until one cowboy's health reaches zero or after five rounds.

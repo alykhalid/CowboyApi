@@ -9,7 +9,7 @@ namespace Cowboy.API.Controllers.v1
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/v{version:apiVersion}/cowboy")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
     public class CowboyController : ControllerBase
@@ -21,7 +21,7 @@ namespace Cowboy.API.Controllers.v1
             _cowboyService = cowboyService;
         }
 
-        [HttpGet("List")]
+        [HttpGet("list")]
         [ProducesResponseType(typeof(IEnumerable<CowboyEntity>), 200)]
         public async Task<IEnumerable<CowboyEntity>> ListCowboys()
         {
@@ -87,7 +87,7 @@ namespace Cowboy.API.Controllers.v1
             return NoContent();
         }
 
-        [HttpPost("Shoot/{id}")]
+        [HttpPost("shoot/{id}")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(CowboyEntity), 200)]
         public async Task<IActionResult> ShootGunAsync(int id)
@@ -101,7 +101,7 @@ namespace Cowboy.API.Controllers.v1
             return Ok(result.Cowboy);
         }
 
-        [HttpPost("Reload/{id}")]
+        [HttpPost("reload/{id}")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(CowboyEntity), 200)]
         public async Task<IActionResult> ReloadGunAsync(int id)
