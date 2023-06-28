@@ -77,3 +77,13 @@ This flow is best suited for Machine-to-Machine (M2M) applications, such as CLIs
 Token format is JWT (JSON web token)
 
 HTTPS is a must when using jwt tokens
+
+## Production ready
+
+1. Support sorting and paging
+2. Validate user data
+3. Versioning API
+4. Implement rate limiting
+5. Implement logging
+6. Implement monitoring
+7. API Documentation for devs
